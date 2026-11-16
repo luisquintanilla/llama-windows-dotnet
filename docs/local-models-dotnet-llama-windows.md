@@ -231,7 +231,7 @@ Because the chat loop only depends on `IChatClient`, it stays the same if you us
 
 Watch the announcement of Llama on Windows in the .NET Conf 2026 keynote.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/SIBdHRrk8os" title=".NET Conf 2026 keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/SIBdHRrk8os?start=3207" title=".NET Conf 2026 keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Next steps
 
