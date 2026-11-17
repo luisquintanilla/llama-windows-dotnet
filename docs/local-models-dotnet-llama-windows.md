@@ -4,7 +4,9 @@ Running AI models locally lets you keep your prompts and responses on your PC, w
 
 Llama on Windows takes care of that for you. It's a tray app that helps you find, download, and chat with open models on your PC. Once a model is running, your .NET apps can use it too.
 
-In this post, you'll install Llama, download a model, and then call it from a .NET 11 app that fits in a single C# file.
+In this post, you'll install Llama, download a model, and call it from a .NET 11 C# file-based app.
+
+You can find the complete code in the [Llama on Windows .NET sample repository](https://github.com/luisquintanilla/llama-windows-dotnet).
 
 ## What is Llama on Windows?
 
@@ -58,7 +60,7 @@ Chatting in the tray is a great way to try out models. When you're ready to buil
 
 Llama runs a llama.cpp server on `http://localhost:9931`. The server provides endpoints that follow the OpenAI API format, such as `/v1/chat/completions` and `/v1/models`. That means you can use the OpenAI client libraries you already know. Your requests go to the server running on your machine, not to OpenAI, and you don't need an API key.
 
-In .NET, you can use the [OpenAI](https://www.nuget.org/packages/OpenAI) library together with [Microsoft.Extensions.AI](https://learn.microsoft.com/dotnet/ai/microsoft-extensions-ai) to work with Llama through `IChatClient`. That's the same interface you'd use with Azure OpenAI, Foundry Local, Ollama, and other providers.
+In .NET, you can use the [OpenAI](https://www.nuget.org/packages/OpenAI) library together with [Microsoft.Extensions.AI](https://learn.microsoft.com/dotnet/ai/microsoft-extensions-ai) to work with Llama through `IChatClient`. This shared interface lets you build chat, streaming, and tool calling into your app without coupling that code to a specific model provider.
 
 ### What you'll need
 
@@ -238,8 +240,9 @@ Watch the announcement of Llama on Windows in the .NET Conf 2026 keynote.
 We're excited to see what you build with local models and .NET. Here's where to go next:
 
 - Install [Llama](https://llama.app/) and download your first model.
+- [Try the .NET sample](https://github.com/luisquintanilla/llama-windows-dotnet): run `dotnet run llama-chat.cs` to chat with your local model and try the tools.
 - Read the [Llama API documentation](https://llama.app/docs/api) to learn about other endpoints, such as embeddings and structured output.
 - Explore the [Microsoft.Extensions.AI documentation](https://learn.microsoft.com/dotnet/ai/microsoft-extensions-ai) to learn more about `IChatClient`.
-- Combine local and cloud models in one app with [Routing and Failover for Microsoft.Extensions.AI](https://devblogs.microsoft.com/dotnet/routing-and-failover-for-microsoft-extensions-ai/).
+- Take it further by combining Llama with cloud models using [Routing and Failover for Microsoft.Extensions.AI](https://devblogs.microsoft.com/dotnet/routing-and-failover-for-microsoft-extensions-ai/).
 
-Thanks to the Hugging Face and llama.cpp teams for building Llama on Windows. If you run into issues or have ideas for the app, open an issue in the [Llama-Windows repository](https://github.com/ggml-org/Llama-Windows/issues). We want to hear from you!
+Thanks to the Hugging Face and llama.cpp teams for building Llama on Windows. For issues or feature requests for Llama itself, open an issue in the [Llama-Windows repository](https://github.com/ggml-org/Llama-Windows/issues). Share what you're building with local models and .NET in the comments below.
