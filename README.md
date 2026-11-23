@@ -9,5 +9,5 @@ With the .NET 11 SDK installed and Llama running with a downloaded model:
 dotnet run llama-chat.cs
 ```
 
-See the [walkthrough](docs/local-models-dotnet-llama-windows.md) for installation,
+See the [blog post](https://devblogs.microsoft.com/dotnet/local-models-dotnet-llama-windows/) for installation,
 model selection, and an explanation of the code.
